@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SRIN VALVES | Shiva Manufacturing Company</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff;
+color:#222;
+}
+
+.topbar{
+background:#f4f6f8;
+padding:10px 6%;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+font-size:14px;
+}
+
+.topbar span{
+margin-right:20px;
+}
+
+.navbar{
+background:#fff;
+padding:18px 6%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo-area img{
+width:90px;
+}
+
+.logo-text h1{
+font-size:42px;
+color:#0a3d91;
+}
+
+.logo-text p{
+font-weight:600;
+}
+
+.nav-links a{
+text-decoration:none;
+margin:0 15px;
+color:#222;
+font-weight:600;
+}
+
+.quote-btn{
+background:#0a3d91;
+color:#fff;
+padding:12px 28px;
+border-radius:5px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+background:linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.92)),
+url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1600');
+background-size:cover;
+background-position:center;
+padding:90px 6%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.hero-left{
+max-width:600px;
+}
+
+.hero-left h2{
+font-size:58px;
+color:#0a3d91;
+margin-bottom:15px;
+}
+
+.hero-left h3{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.hero-left p{
+font-size:22px;
+margin-bottom:25px;
+}
+
+.hero-left ul{
+list-style:none;
+margin-bottom:30px;
+}
+
+.hero-left ul li{
+margin-bottom:12px;
+font-size:18px;
+}
+
+.hero-left ul li i{
+color:#0a3d91;
+margin-right:10px;
+}
+
+.hero-buttons a{
+display:inline-block;
+margin-right:15px;
+margin-bottom:10px;
+}
+
+.primary-btn{
+background:#0a3d91;
+color:white;
+padding:15px 30px;
+text-decoration:none;
+font-weight:bold;
+border-radius:4px;
+}
+
+.secondary-btn{
+border:2px solid #0a3d91;
+color:#0a3d91;
+padding:13px 28px;
+text-decoration:none;
+font-weight:bold;
+border-radius:4px;
+}
+
+.hero-right img{
+width:100%;
+max-width:650px;
+}
+
+.certifications{
+background:#fff;
+padding:30px 6%;
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+border-top:1px solid #eee;
+}
+
+.badge{
+padding:12px 25px;
+background:#f5f8ff;
+border:1px solid #d7e3ff;
+font-weight:bold;
+color:#0a3d91;
+border-radius:6px;
+}
+
+.features{
+padding:60px 6%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.feature-box{
+padding:30px;
+background:white;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+border-radius:10px;
+text-align:center;
+}
+
+.feature-box i{
+font-size:42px;
+color:#0a3d91;
+margin-bottom:15px;
+}
+
+.feature-box h3{
+margin-bottom:10px;
+}
+
+.about-products{
+padding:0 6% 60px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.box{
+background:white;
+padding:35px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+border-radius:10px;
+}
+
+.box h2{
+color:#0a3d91;
+margin-bottom:20px;
+}
+
+.box ul{
+padding-left:20px;
+line-height:2;
+}
+
+.contact{
+background:#f8fbff;
+padding:60px 6%;
+text-align:center;
+}
+
+.contact h2{
+color:#0a3d91;
+margin-bottom:20px;
+}
+
+.contact p{
+margin-bottom:10px;
+font-size:18px;
+}
+
+footer{
+background:#0a3d91;
+color:white;
+padding:25px;
+text-align:center;
+}
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+width:65px;
+height:65px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:34px;
+color:white;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+#home,
+#about,
+#products,
+#contact{
+scroll-margin-top:100px;
+}
+
+.about-section,
+.products-section{
+padding:0 6% 60px;
+}
+
+@media(max-width:900px){
+
+.navbar{
+flex-direction:column;
+gap:20px;
+}
+
+.hero{
+text-align:center;
+}
+
+.hero-left h2{
+font-size:42px;
+}
+
+.hero-left h3{
+font-size:24px;
+}
+
+.about-products{
+grid-template-columns:1fr;
+}
+}
+
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch;text-align:left;}
+.map-box iframe{width:100%;height:320px;border:0;border-radius:10px;}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;}}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+
+<div>
+<span><i class="fa-solid fa-phone"></i> +91 7986485061</span>
+<span><i class="fa-solid fa-envelope"></i> shivamanufacturingco@gmail.com</span>
+</div>
+
+<div>
+<i class="fa-solid fa-location-dot"></i>
+Jalandhar, Punjab, India
+</div>
+
+</div>
+
+<div class="navbar">
+
+<div class="logo-area">
+
+<img src="image.png" alt="SRIN Logo">
+
+<div class="logo-text">
+<h1>SRIN VALVES</h1>
+<p>SHIVA MANUFACTURING COMPANY</p>
+</div>
+
+</div>
+
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
+</div>
+
+<a href="#contact" class="quote-btn">GET QUOTE</a>
+
+</div>
+
+<section class="hero" id="home">
+
+<div class="hero-left">
+
+<h2>QUALITY PROVEN INDUSTRIAL VALVE MANUFACTURER</h2>
+
+<h3>SRIN VALVES</h3>
+
+<p>Manufacturer of Premium Butterfly Valves of All Sizes</p>
+
+<ul>
+<li><i class="fa-solid fa-circle-check"></i> ISI Certified Manufacturer</li>
+<li><i class="fa-solid fa-circle-check"></i> Reliable Industrial Performance</li>
+<li><i class="fa-solid fa-circle-check"></i> Durable Construction</li>
+<li><i class="fa-solid fa-circle-check"></i> Customized Valve Solutions</li>
+</ul>
+
+<div class="hero-buttons">
+<a href="#products" class="primary-btn">VIEW PRODUCTS</a>
+
+<a href="https://wa.me/917986485061" target="_blank" class="secondary-btn">
+WHATSAPP US
+</a>
+</div>
+
+</div>
+
+<div class="hero-right">
+<img src="image1.png" alt="Butterfly Valves">
+</div>
+
+</section>
+
+<section class="certifications">
+
+<div class="badge">ISI CERTIFIED</div>
+<div class="badge">QUALITY ASSURED</div>
+<div class="badge">INDUSTRIAL GRADE</div>
+<div class="badge">CUSTOM MANUFACTURING</div>
+
+</section>
+
+<section class="features">
+
+<div class="feature-box">
+<i class="fa-solid fa-award"></i>
+<h3>Quality Assured</h3>
+<p>Strict manufacturing and testing standards.</p>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-shield"></i>
+<h3>Reliable Products</h3>
+<p>Trusted butterfly valves for industrial use.</p>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-gears"></i>
+<h3>Precision Engineering</h3>
+<p>Designed for efficient flow control.</p>
+</div>
+
+<div class="feature-box">
+<i class="fa-solid fa-users"></i>
+<h3>Customer Focused</h3>
+<p>Dedicated support and customized solutions.</p>
+</div>
+
+</section>
+
+<section class="about-products about-section" id="about">
+
+<div class="box">
+
+<h2>ABOUT US</h2>
+
+<p>
+Shiva Manufacturing Company is the manufacturer of
+SRIN VALVES. We specialize in manufacturing premium
+quality butterfly valves for industrial applications.
+Our focus is quality, durability, reliability and
+customer satisfaction.
+</p>
+
+</div>
+
+</section>
+
+<section class="about-products products-section" id="products">
+
+<div class="box">
+
+<h2>OUR PRODUCTS</h2>
+
+<ul>
+<li>Butterfly Valves of All Sizes</li>
+<li>Wafer Type Butterfly Valves</li>
+<li>Gear Operated Butterfly Valves</li>
+<li>Pneumatic Butterfly Valves</li>
+<li>Industrial Flow Control Valves</li>
+<li>Customized Valve Solutions</li>
+</ul>
+
+</div>
+
+
+<div class="box">
+<h2>PARTNER'S VISION</h2>
+<p>Our vision is to provide high-quality industrial valves and reliable flow control solutions across India and international markets by delivering products customers can trust for quality, durability and performance.</p>
+<div style="margin-top:20px;text-align:right;font-weight:bold;color:#0a3d91;">— Trinabh Sareen<br><span style="font-weight:normal;font-size:14px;">Founder</span></div>
+</div>
+
+</section>
+
+
+<section class="contact" id="contact">
+<div class="contact-grid">
+<div class="box">
+<h2>CONTACT US</h2>
+<p><strong>Phone:</strong> +91 7986485061</p>
+<p><strong>Email:</strong> shivamanufacturingco@gmail.com</p>
+<p><strong>Address:</strong><br>Raja Garden, Gadaipur,<br>Near Focal Point,<br>Jalandhar, Punjab 144001</p>
+</div>
+<div class="box map-box">
+<h2>OUR LOCATION</h2>
+<iframe src="https://www.google.com/maps?q=Raja%20Garden%20Gadaipur%20Near%20Focal%20Point%20Jalandhar%20Punjab%20144001&output=embed" loading="lazy"></iframe>
+</div>
+</div>
+</section>
+
+
+<footer>
+© 2026 SRIN VALVES | SHIVA MANUFACTURING COMPANY
+</footer>
+
+<a href="https://wa.me/917986485061" class="whatsapp" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
